@@ -18,7 +18,7 @@ export class ColorPicker {
   convertColor (color) {
     let colorCode
 
-    // Check input and convert
+    // Check input and convert, set to no color if wrong.
     switch (color.toLowerCase()) {
       case 'red':
         colorCode = '\x1b[31m'
