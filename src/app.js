@@ -14,16 +14,23 @@ const inputHandler = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 })
+try {
+  // Prompt user for name and favorite color
+  inputHandler.question('Tell me your first name ', (userName) => {
+    inputHandler.question('Red, Green, Pink or Blue? ', (favoriteColor) => {
+      // Generate and print users name and color in the chosen color
+      const color = colorPicker.convertColor(favoriteColor)
+      console.log(`${color}, Hello ${userName} I also love ${favoriteColor}`)
 
-inputHandler.question('Tell me your first name ', (userName) => {
-  inputHandler.question('Red, Green, Pink or blue? ', (favoriteColor) => {
-    console.log(`Hello ${userName} I also love ${favoriteColor}`)
-    inputHandler.close()
+      // Close the interface
+      inputHandler.close()
+    })
   })
-})
+  
+} catch (error) {
+  console.log('Something went wrong. Yo input might be wrong')
+}
 
 // inputHandler.question('Red, Green, Pink or blue?')
-
-// console.log(colorPicker.convertColor('red'))
 
 // console.log('\x1b[35m%s\x1b[0m','Hello babe')
