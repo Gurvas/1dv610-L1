@@ -21,10 +21,16 @@ export class ColorPicker {
     // Check input and convert
     switch (color.toLowerCase()) {
       case 'red':
-        colorCode = '\x1b[35m'
+        colorCode = '\x1b[31m'
         break;
       case 'green':
         colorCode = '\x1b[32m'
+        break
+      case 'pink':
+        colorCode = '\x1b[35m'
+        break
+      case 'blue':
+        colorCode = '\x1b[34m'
         break
       default:
         colorCode = '\x1b[0m'
