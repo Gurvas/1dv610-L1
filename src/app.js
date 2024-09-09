@@ -20,7 +20,7 @@ try {
     inputHandler.question('Red, Green, Pink or Blue? ', (favoriteColor) => {
       // Generate and print users name and color in the chosen color
       const color = colorPicker.convertColor(favoriteColor)
-      console.log(`${color}, Hello ${userName} I also love ${favoriteColor}`)
+      console.log(`${color}Hello ${userName} I also love ${favoriteColor}. \x1b[0m`)
 
       // Close the interface
       inputHandler.close()

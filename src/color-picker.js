@@ -21,13 +21,13 @@ export class ColorPicker {
     // Check input and convert
     switch (color.toLowerCase()) {
       case 'red':
-        colorCode = '\x1b[35m%s\x1b[35m'
+        colorCode = '\x1b[35m'
         break;
       case 'green':
-        colorCode = '\x1b[32m%s\x1b[32m'
+        colorCode = '\x1b[32m'
         break
       default:
-        colorCode = '\x1b[0m%s\x1b[0m'
+        colorCode = '\x1b[0m'
     }
     return colorCode
   }
