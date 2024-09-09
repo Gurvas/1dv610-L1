@@ -15,6 +15,15 @@ const inputHandler = readline.createInterface({
   output: process.stdout
 })
 
-console.log(colorPicker.convertColor('red'))
+inputHandler.question('Tell me your first name ', (userName) => {
+  inputHandler.question('Red, Green, Pink or blue? ', (favoriteColor) => {
+    console.log(`Hello ${userName} I also love ${favoriteColor}`)
+    inputHandler.close()
+  })
+})
 
-console.log('\x1b[35m%s\x1b[0m','Hello babe')
+// inputHandler.question('Red, Green, Pink or blue?')
+
+// console.log(colorPicker.convertColor('red'))
+
+// console.log('\x1b[35m%s\x1b[0m','Hello babe')
