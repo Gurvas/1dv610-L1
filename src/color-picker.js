@@ -16,7 +16,20 @@ export class ColorPicker {
    * @returns {string} - The ANSI escape code for the given color.
    */
   convertColor (color) {
-    return 'Great success'
+    let colorCode
+
+    // Check input and convert
+    switch (color.toLowerCase()) {
+      case 'red':
+        colorCode = '\x1b[35m%s\x1b[35m'
+        break;
+      case 'green':
+        colorCode = '\x1b[32m%s\x1b[32m'
+        break
+      default:
+        colorCode = '\x1b[0m%s\x1b[0m'
+    }
+    return colorCode
   }
 
 }
