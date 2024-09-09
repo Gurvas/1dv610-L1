@@ -5,9 +5,15 @@
  * @version 1.0.0
  */
 
-import { ColorPicker } from "./Color-picker.js"
+import readline from 'readline'
+import { ColorPicker } from './color-picker.js'
 
 const colorPicker = new ColorPicker
+
+const inputHandler = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
 
 console.log(colorPicker.convertColor('red'))
 
